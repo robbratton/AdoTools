@@ -51,7 +51,9 @@ namespace AdoTools.Ado.Tests.SourceToolTests
 
             // ReSharper disable once ObjectCreationAsStatement
             Assert.That(
+#pragma warning disable CS0618 // Type or member is obsolete
                 () => new GitToolCommandLine(_commandLineToolSucceedsMock.Object, uri, testPath),
+#pragma warning restore CS0618 // Type or member is obsolete
                 Throws.ArgumentException);
         }
 
@@ -69,7 +71,9 @@ namespace AdoTools.Ado.Tests.SourceToolTests
             var serverUri = new Uri(GoodUriString);
             const string basePath = "/";
 
+#pragma warning disable CS0618 // Type or member is obsolete
             var tool = new GitToolCommandLine(_commandLineToolFailsMock.Object, serverUri, basePath);
+#pragma warning restore CS0618 // Type or member is obsolete
 
             Assert.That(() => tool.Add(), Throws.TypeOf<InvalidOperationException>());
             _commandLineToolFailsMock.Verify(
@@ -83,7 +87,9 @@ namespace AdoTools.Ado.Tests.SourceToolTests
             var serverUri = new Uri(GoodUriString);
             const string basePath = "/";
 
+#pragma warning disable CS0618 // Type or member is obsolete
             var tool = new GitToolCommandLine(_commandLineToolSucceedsMock.Object, serverUri, basePath);
+#pragma warning restore CS0618 // Type or member is obsolete
 
             Assert.That(() => tool.Add(), Throws.Nothing);
             _commandLineToolSucceedsMock.Verify(
@@ -97,7 +103,9 @@ namespace AdoTools.Ado.Tests.SourceToolTests
             var serverUri = new Uri(GoodUriString);
             const string basePath = "/";
 
+#pragma warning disable CS0618 // Type or member is obsolete
             var tool = new GitToolCommandLine(_commandLineToolThrowsMock.Object, serverUri, basePath);
+#pragma warning restore CS0618 // Type or member is obsolete
 
             Assert.That(() => tool.Add(), Throws.TypeOf<JunkException>());
             _commandLineToolThrowsMock.Verify(
@@ -111,7 +119,9 @@ namespace AdoTools.Ado.Tests.SourceToolTests
             var serverUri = new Uri(GoodUriString);
             const string basePath = "/";
 
+#pragma warning disable CS0618 // Type or member is obsolete
             var tool = new GitToolCommandLine(_commandLineToolFailsMock.Object, serverUri, basePath);
+#pragma warning restore CS0618 // Type or member is obsolete
 
             Assert.That(() => tool.Branch("testBranch"), Throws.TypeOf<InvalidOperationException>());
             _commandLineToolFailsMock.Verify(
@@ -125,7 +135,9 @@ namespace AdoTools.Ado.Tests.SourceToolTests
             var serverUri = new Uri(GoodUriString);
             const string basePath = "/";
 
+#pragma warning disable CS0618 // Type or member is obsolete
             var tool = new GitToolCommandLine(_commandLineToolSucceedsMock.Object, serverUri, basePath);
+#pragma warning restore CS0618 // Type or member is obsolete
 
             Assert.That(() => tool.Branch("testBranch"), Throws.Nothing);
             _commandLineToolSucceedsMock.Verify(
@@ -139,7 +151,9 @@ namespace AdoTools.Ado.Tests.SourceToolTests
             var serverUri = new Uri(GoodUriString);
             const string basePath = "/";
 
+#pragma warning disable CS0618 // Type or member is obsolete
             var tool = new GitToolCommandLine(_commandLineToolThrowsMock.Object, serverUri, basePath);
+#pragma warning restore CS0618 // Type or member is obsolete
 
             Assert.That(() => tool.Branch("testBranch"), Throws.TypeOf<JunkException>());
             _commandLineToolThrowsMock.Verify(
@@ -153,7 +167,9 @@ namespace AdoTools.Ado.Tests.SourceToolTests
             var serverUri = new Uri(GoodUriString);
             const string basePath = "/";
 
+#pragma warning disable CS0618 // Type or member is obsolete
             var tool = new GitToolCommandLine(_commandLineToolFailsMock.Object, serverUri, basePath);
+#pragma warning restore CS0618 // Type or member is obsolete
 
             Assert.That(() => tool.CheckOut("testBranch"), Throws.TypeOf<InvalidOperationException>());
             _commandLineToolFailsMock.Verify(
@@ -167,7 +183,9 @@ namespace AdoTools.Ado.Tests.SourceToolTests
             var serverUri = new Uri(GoodUriString);
             const string basePath = "/";
 
+#pragma warning disable CS0618 // Type or member is obsolete
             var tool = new GitToolCommandLine(_commandLineToolSucceedsMock.Object, serverUri, basePath);
+#pragma warning restore CS0618 // Type or member is obsolete
 
             var branchName = branchProvided
                 ? "testBranch"
@@ -185,7 +203,9 @@ namespace AdoTools.Ado.Tests.SourceToolTests
             var serverUri = new Uri(GoodUriString);
             const string basePath = "/";
 
+#pragma warning disable CS0618 // Type or member is obsolete
             var tool = new GitToolCommandLine(_commandLineToolFailsMock.Object, serverUri, basePath);
+#pragma warning restore CS0618 // Type or member is obsolete
 
             Assert.That(() => tool.Clone(), Throws.TypeOf<InvalidOperationException>());
             _commandLineToolFailsMock.Verify(
@@ -199,7 +219,9 @@ namespace AdoTools.Ado.Tests.SourceToolTests
             var serverUri = new Uri(GoodUriString);
             const string basePath = "/";
 
+#pragma warning disable CS0618 // Type or member is obsolete
             var tool = new GitToolCommandLine(_commandLineToolSucceedsMock.Object, serverUri, basePath);
+#pragma warning restore CS0618 // Type or member is obsolete
 
             Assert.That(() => tool.Clone(), Throws.Nothing);
             _commandLineToolSucceedsMock.Verify(
@@ -213,7 +235,9 @@ namespace AdoTools.Ado.Tests.SourceToolTests
             var serverUri = new Uri(GoodUriString);
             const string basePath = "/";
 
+#pragma warning disable CS0618 // Type or member is obsolete
             var result = new GitToolCommandLine(_commandLineToolSucceedsMock.Object, serverUri, basePath);
+#pragma warning restore CS0618 // Type or member is obsolete
 
             Assert.That(result, Is.Not.Null);
         }
