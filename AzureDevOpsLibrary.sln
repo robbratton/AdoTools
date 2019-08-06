@@ -1,0 +1,85 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29102.190
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AdoTools.Ado.Tests", "AdoTools.Ado.Tests\AdoTools.Ado.Tests.csproj", "{6DEAFE9A-017E-4A0F-828E-B308A9455598}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AdoTools.Common", "AdoTools.Common\AdoTools.Common.csproj", "{162CC07A-DA15-498A-A33F-25B0A867C64D}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AdoTools.Common.Tests", "AdoTools.Common.Tests\AdoTools.Common.Tests.csproj", "{4DFDB82C-0F43-4410-B3F4-F22C9A683567}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AdoTools.DependencyParser", "AdoTools.DependencyParser\AdoTools.DependencyParser.csproj", "{F40B7696-7DF6-4C2F-BB7B-6A1ED74B7EC9}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AdoTools.DependencyParser.Tests", "AdoTools.DependencyParser.Tests\AdoTools.DependencyParser.Tests.csproj", "{3C10732B-C769-48E1-B3B3-583D55DA2F83}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AdoTools.VsParser", "AdoTools.VsParser\AdoTools.VsParser.csproj", "{3293CD0C-CB5B-4EA8-9400-986D97A90582}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AdoTools.VsParser.Tests", "AdoTools.VsParser.Tests\AdoTools.VsParser.Tests.csproj", "{D669B59C-A185-4270-B5D3-6D995F29B5E0}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Common", "Common", "{B627FE57-CE53-47BB-9922-5C7B3E1A613B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DependencyParser", "DependencyParser", "{C9FB7F41-D627-4588-B0D6-831FEEBE5988}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "VsParser", "VsParser", "{6AB0A2DD-4A8E-4A16-BCC3-85C98CE9FDAB}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Ado", "Ado", "{82F13F8C-50CD-4D7F-8FB5-CA9EACEBF4A8}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AdoTools.Ado", "AdoTools.Ado\AdoTools.Ado.csproj", "{12FC6BED-5BDC-413E-96C1-AE5DB0DF1AB5}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6DEAFE9A-017E-4A0F-828E-B308A9455598}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6DEAFE9A-017E-4A0F-828E-B308A9455598}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6DEAFE9A-017E-4A0F-828E-B308A9455598}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6DEAFE9A-017E-4A0F-828E-B308A9455598}.Release|Any CPU.Build.0 = Release|Any CPU
+		{162CC07A-DA15-498A-A33F-25B0A867C64D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{162CC07A-DA15-498A-A33F-25B0A867C64D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{162CC07A-DA15-498A-A33F-25B0A867C64D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{162CC07A-DA15-498A-A33F-25B0A867C64D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4DFDB82C-0F43-4410-B3F4-F22C9A683567}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4DFDB82C-0F43-4410-B3F4-F22C9A683567}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4DFDB82C-0F43-4410-B3F4-F22C9A683567}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4DFDB82C-0F43-4410-B3F4-F22C9A683567}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F40B7696-7DF6-4C2F-BB7B-6A1ED74B7EC9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F40B7696-7DF6-4C2F-BB7B-6A1ED74B7EC9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F40B7696-7DF6-4C2F-BB7B-6A1ED74B7EC9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F40B7696-7DF6-4C2F-BB7B-6A1ED74B7EC9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3C10732B-C769-48E1-B3B3-583D55DA2F83}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3C10732B-C769-48E1-B3B3-583D55DA2F83}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3C10732B-C769-48E1-B3B3-583D55DA2F83}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3C10732B-C769-48E1-B3B3-583D55DA2F83}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3293CD0C-CB5B-4EA8-9400-986D97A90582}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3293CD0C-CB5B-4EA8-9400-986D97A90582}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3293CD0C-CB5B-4EA8-9400-986D97A90582}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3293CD0C-CB5B-4EA8-9400-986D97A90582}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D669B59C-A185-4270-B5D3-6D995F29B5E0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D669B59C-A185-4270-B5D3-6D995F29B5E0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D669B59C-A185-4270-B5D3-6D995F29B5E0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D669B59C-A185-4270-B5D3-6D995F29B5E0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{12FC6BED-5BDC-413E-96C1-AE5DB0DF1AB5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{12FC6BED-5BDC-413E-96C1-AE5DB0DF1AB5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{12FC6BED-5BDC-413E-96C1-AE5DB0DF1AB5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{12FC6BED-5BDC-413E-96C1-AE5DB0DF1AB5}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{6DEAFE9A-017E-4A0F-828E-B308A9455598} = {82F13F8C-50CD-4D7F-8FB5-CA9EACEBF4A8}
+		{162CC07A-DA15-498A-A33F-25B0A867C64D} = {B627FE57-CE53-47BB-9922-5C7B3E1A613B}
+		{4DFDB82C-0F43-4410-B3F4-F22C9A683567} = {B627FE57-CE53-47BB-9922-5C7B3E1A613B}
+		{F40B7696-7DF6-4C2F-BB7B-6A1ED74B7EC9} = {C9FB7F41-D627-4588-B0D6-831FEEBE5988}
+		{3C10732B-C769-48E1-B3B3-583D55DA2F83} = {C9FB7F41-D627-4588-B0D6-831FEEBE5988}
+		{3293CD0C-CB5B-4EA8-9400-986D97A90582} = {6AB0A2DD-4A8E-4A16-BCC3-85C98CE9FDAB}
+		{D669B59C-A185-4270-B5D3-6D995F29B5E0} = {6AB0A2DD-4A8E-4A16-BCC3-85C98CE9FDAB}
+		{12FC6BED-5BDC-413E-96C1-AE5DB0DF1AB5} = {82F13F8C-50CD-4D7F-8FB5-CA9EACEBF4A8}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E0AA5916-F46A-4F31-B295-4C7BC00B5D8B}
+	EndGlobalSection
+EndGlobal

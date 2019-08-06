@@ -1,0 +1,66 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net472</TargetFramework>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+    <AssemblyName>AdoTools.DependencyParser.Tests</AssemblyName>
+    <RootNamespace>AdoTools.DependencyParser.Tests</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="TestFiles\app.config.txt" />
+    <None Remove="TestFiles\AppSettings.tok.Json.txt" />
+    <None Remove="TestFiles\dataConfiguration.config.txt" />
+    <None Remove="TestFiles\packages.config.txt" />
+    <None Remove="TestFiles\Sample.sln.txt" />
+    <None Remove="TestFiles\SampleNew.csproj.txt" />
+    <None Remove="TestFiles\SampleOld.csproj.txt" />
+    <None Remove="TestFiles\web.config.txt" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="TestFiles\appSettings.tok.json.txt" />
+    <EmbeddedResource Include="TestFiles\web.config.txt" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="TestFiles\packages.config.txt" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="TestFiles\dataConfiguration.config.txt" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="TestFiles\app.config.txt" />
+  </ItemGroup>
+  
+  <ItemGroup>
+    <PackageReference Include="FluentAssertions" Version="5.6.0" />
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.0.1" />
+    <PackageReference Include="Moq" Version="4.10.1" />
+    <PackageReference Include="NLog" Version="4.6.0" />
+    <PackageReference Include="NUnit" Version="3.11.0" />
+    <PackageReference Include="NUnit3TestAdapter" Version="3.13.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\AdoTools.DependencyParser\AdoTools.DependencyParser.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="TestFiles\SampleNew.csproj.txt" />
+    <EmbeddedResource Include="TestFiles\SampleOld.csproj.txt" />
+    <EmbeddedResource Include="TestFiles\Sample.sln.txt" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="NLog.config">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+</Project>
