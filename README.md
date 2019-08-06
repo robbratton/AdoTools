@@ -1,4 +1,4 @@
-# Ado Libraries
+# Azure DevOps Libraries
 
 Tools to work with Azure DevOps.
 
