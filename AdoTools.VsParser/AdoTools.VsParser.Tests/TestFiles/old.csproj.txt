@@ -1,0 +1,586 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{02059155-1D35-4866-BB62-934B029AF00A}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>UPMC.Web.WcfRestHttp</RootNamespace>
+    <AssemblyName>UPMC.Web.WcfRestHttp</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <UseIISExpress>false</UseIISExpress>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>4.0</OldToolsVersion>
+    <UpgradeBackupLocation />
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication>enabled</IISExpressAnonymousAuthentication>
+    <IISExpressWindowsAuthentication>enabled</IISExpressWindowsAuthentication>
+    <IISExpressUseClassicPipelineMode>false</IISExpressUseClassicPipelineMode>
+    <TargetFrameworkProfile />
+    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\..\</SolutionDir>
+    <RestorePackages>true</RestorePackages>
+    <UseGlobalApplicationHostFile />
+    <Use64BitIISExpress />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+    <DocumentationFile>bin\UPMC.Web.WcfRestHttp.XML</DocumentationFile>
+    <NoWarn>1570, 1591</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Castle.Core, Version=3.3.0.0, Culture=neutral, PublicKeyToken=407dd0808d44fbdc, processorArchitecture=MSIL">
+      <HintPath>..\packages\Castle.Core.3.3.3\lib\net45\Castle.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="FluentValidation, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7de548da2fbae0f0, processorArchitecture=MSIL">
+      <HintPath>..\packages\FluentValidation.7.2.0\lib\net45\FluentValidation.dll</HintPath>
+    </Reference>
+    <Reference Include="Iesi.Collections, Version=4.0.0.4000, Culture=neutral, PublicKeyToken=aa95f207798dfdb4, processorArchitecture=MSIL">
+      <HintPath>..\packages\Iesi.Collections.4.0.2\lib\net461\Iesi.Collections.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.SignalR.Core, Version=1.2.2.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.SignalR.Core.1.2.2\lib\net40\Microsoft.AspNet.SignalR.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.SignalR.Owin, Version=1.2.2.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.SignalR.Owin.1.2.2\lib\net45\Microsoft.AspNet.SignalR.Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.SignalR.SystemWeb, Version=1.2.2.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.SignalR.SystemWeb.1.2.2\lib\net45\Microsoft.AspNet.SignalR.SystemWeb.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.Owin.Host.SystemWeb, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.Host.SystemWeb.1.0.1\lib\net45\Microsoft.Owin.Host.SystemWeb.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Configuration, Version=1.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\ThirdParty\Microsoft.Practices.EnterpriseLibrary.Configuration.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Logging.Sinks.Database">
+      <HintPath>..\..\..\..\ThirdParty\Microsoft.Practices.EnterpriseLibrary.Logging.Sinks.Database.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Threading.Tasks, Version=1.0.12.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Bcl.Async.1.0.168\lib\net40\Microsoft.Threading.Tasks.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Threading.Tasks.Extensions, Version=1.0.12.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Bcl.Async.1.0.168\lib\net40\Microsoft.Threading.Tasks.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Threading.Tasks.Extensions.Desktop, Version=1.0.168.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Bcl.Async.1.0.168\lib\net40\Microsoft.Threading.Tasks.Extensions.Desktop.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=10.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.10.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="NHibernate, Version=4.1.0.4000, Culture=neutral, PublicKeyToken=aa95f207798dfdb4, processorArchitecture=MSIL">
+      <HintPath>..\packages\NHibernate.4.1.1.4000\lib\net40\NHibernate.dll</HintPath>
+    </Reference>
+    <Reference Include="Ninject, Version=3.2.0.0, Culture=neutral, PublicKeyToken=c7192dc5380945e7, processorArchitecture=MSIL">
+      <HintPath>..\packages\Ninject.3.2.2.0\lib\net45-full\Ninject.dll</HintPath>
+    </Reference>
+    <Reference Include="Ninject.Extensions.ContextPreservation, Version=3.2.0.0, Culture=neutral, PublicKeyToken=c7192dc5380945e7, processorArchitecture=MSIL">
+      <HintPath>..\packages\Ninject.Extensions.ContextPreservation.3.2.0.0\lib\net45-full\Ninject.Extensions.ContextPreservation.dll</HintPath>
+    </Reference>
+    <Reference Include="Ninject.Extensions.Conventions, Version=3.2.0.0, Culture=neutral, PublicKeyToken=c7192dc5380945e7, processorArchitecture=MSIL">
+      <HintPath>..\packages\Ninject.Extensions.Conventions.3.2.0.0\lib\net45-full\Ninject.Extensions.Conventions.dll</HintPath>
+    </Reference>
+    <Reference Include="Ninject.Extensions.Factory, Version=3.2.0.0, Culture=neutral, PublicKeyToken=c7192dc5380945e7, processorArchitecture=MSIL">
+      <HintPath>..\packages\Ninject.Extensions.Factory.3.2.1.0\lib\net45-full\Ninject.Extensions.Factory.dll</HintPath>
+    </Reference>
+    <Reference Include="Ninject.Extensions.Interception, Version=3.2.0.0, Culture=neutral, PublicKeyToken=c7192dc5380945e7, processorArchitecture=MSIL">
+      <HintPath>..\packages\Ninject.Extensions.Interception.3.2.0.0\lib\net45-full\Ninject.Extensions.Interception.dll</HintPath>
+    </Reference>
+    <Reference Include="Ninject.Extensions.Interception.DynamicProxy, Version=3.2.0.0, Culture=neutral, PublicKeyToken=c7192dc5380945e7, processorArchitecture=MSIL">
+      <HintPath>..\packages\Ninject.Extensions.Interception.DynamicProxy.3.2.0.0\lib\net45-full\Ninject.Extensions.Interception.DynamicProxy.dll</HintPath>
+    </Reference>
+    <Reference Include="Ninject.Extensions.NamedScope, Version=3.2.0.0, Culture=neutral, PublicKeyToken=c7192dc5380945e7, processorArchitecture=MSIL">
+      <HintPath>..\packages\Ninject.Extensions.NamedScope.3.2.0.0\lib\net45-full\Ninject.Extensions.NamedScope.dll</HintPath>
+    </Reference>
+    <Reference Include="Ninject.Extensions.Wcf, Version=3.2.0.0, Culture=neutral, PublicKeyToken=c7192dc5380945e7, processorArchitecture=MSIL">
+      <HintPath>..\packages\Ninject.Extensions.Wcf.3.2.2.0\lib\net45-full\Ninject.Extensions.Wcf.dll</HintPath>
+    </Reference>
+    <Reference Include="Ninject.Web.Common, Version=3.2.0.0, Culture=neutral, PublicKeyToken=c7192dc5380945e7, processorArchitecture=MSIL">
+      <HintPath>..\packages\Ninject.Web.Common.3.2.3.0\lib\net45-full\Ninject.Web.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="NServiceBus.Callbacks, Version=2.0.0.0, Culture=neutral, PublicKeyToken=9fc386479f8a226c, processorArchitecture=MSIL">
+      <HintPath>..\packages\NServiceBus.Callbacks.2.0.1\lib\net452\NServiceBus.Callbacks.dll</HintPath>
+    </Reference>
+    <Reference Include="NServiceBus.Core, Version=6.0.0.0, Culture=neutral, PublicKeyToken=9fc386479f8a226c, processorArchitecture=MSIL">
+      <HintPath>..\packages\NServiceBus.6.4.0\lib\net452\NServiceBus.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="NServiceBus.FileBasedRouting, Version=1.2.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\NServiceBus.FileBasedRouting.1.2.1\lib\net46\NServiceBus.FileBasedRouting.dll</HintPath>
+    </Reference>
+    <Reference Include="NServiceBus.NHibernate, Version=7.0.0.0, Culture=neutral, PublicKeyToken=9fc386479f8a226c, processorArchitecture=MSIL">
+      <HintPath>..\packages\NServiceBus.NHibernate.7.2.1\lib\net452\NServiceBus.NHibernate.dll</HintPath>
+    </Reference>
+    <Reference Include="NServiceBus.ObjectBuilder.Ninject, Version=6.0.0.0, Culture=neutral, PublicKeyToken=9fc386479f8a226c, processorArchitecture=MSIL">
+      <HintPath>..\packages\NServiceBus.Ninject.6.0.1\lib\net452\NServiceBus.ObjectBuilder.Ninject.dll</HintPath>
+    </Reference>
+    <Reference Include="Owin, Version=1.0.0.0, Culture=neutral, PublicKeyToken=f0ebd12fd5e55cc5, processorArchitecture=MSIL">
+      <HintPath>..\packages\Owin.1.0\lib\net40\Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="ServiceControl.Plugin.Nsb6.CustomChecks, Version=3.0.0.0, Culture=neutral, PublicKeyToken=9fc386479f8a226c, processorArchitecture=MSIL">
+      <HintPath>..\packages\ServiceControl.Plugin.Nsb6.CustomChecks.3.0.0\lib\net452\ServiceControl.Plugin.Nsb6.CustomChecks.dll</HintPath>
+    </Reference>
+    <Reference Include="ServiceControl.Plugin.Nsb6.Heartbeat, Version=3.0.0.0, Culture=neutral, PublicKeyToken=9fc386479f8a226c, processorArchitecture=MSIL">
+      <HintPath>..\packages\ServiceControl.Plugin.Nsb6.Heartbeat.3.0.1\lib\net452\ServiceControl.Plugin.Nsb6.Heartbeat.dll</HintPath>
+    </Reference>
+    <Reference Include="ServiceControl.Plugin.Nsb6.SagaAudit, Version=3.0.0.0, Culture=neutral, PublicKeyToken=9fc386479f8a226c, processorArchitecture=MSIL">
+      <HintPath>..\packages\ServiceControl.Plugin.Nsb6.SagaAudit.3.0.1\lib\net452\ServiceControl.Plugin.Nsb6.SagaAudit.dll</HintPath>
+    </Reference>
+    <Reference Include="StructureMap, Version=4.5.3.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\StructureMap.4.5.3\lib\net45\StructureMap.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.Services" />
+    <Reference Include="System.Net" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.ServiceModel.Activation" />
+    <Reference Include="System.ServiceModel.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="Upmc.ServiceBus.Common, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Upmc.ServiceBus.Common.0.1.0-unstable0063\lib\net461\Upmc.ServiceBus.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Upmc.ServiceBus.Messages, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Upmc.ServiceBus.Messages.0.1.0-unstable0012\lib\net461\Upmc.ServiceBus.Messages.dll</HintPath>
+    </Reference>
+    <Reference Include="Upmc.Services.Clients.Common, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Upmc.Services.Clients.Common.0.1.0-unstable0024\lib\net461\Upmc.Services.Clients.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Upmc.Services.RuleEngine, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Upmc.Services.RuleEngine.0.1.0-unstable0009\lib\net461\Upmc.Services.RuleEngine.dll</HintPath>
+    </Reference>
+    <Reference Include="Upmc.Services.Common, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Upmc.Services.Common.0.1.0-unstable0106\lib\net461\Upmc.Services.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Upmc.Services.Logging, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Upmc.Services.Logging.1.1.0-unstable0002\lib\net461\Upmc.Services.Logging.dll</HintPath>
+    </Reference>
+    <Reference Include="Upmc.Services.Logging.Sqlserver, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Upmc.Services.Logging.Sqlserver.1.1.0-unstable0003\lib\net461\Upmc.Services.Logging.Sqlserver.dll</HintPath>
+    </Reference>
+    <Reference Include="Upmc.Services.MethodResponse, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Upmc.Services.MethodResponse.1.1.0-unstable0010\lib\net461\Upmc.Services.MethodResponse.dll</HintPath>
+    </Reference>
+    <Reference Include="WebActivatorEx, Version=2.0.0.0, Culture=neutral, PublicKeyToken=7b26dc2a43f6a0d4, processorArchitecture=MSIL">
+      <HintPath>..\packages\WebActivatorEx.2.2.0\lib\net40\WebActivatorEx.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_Data\nsb_log_2017-09-08_0.txt" />
+    <Content Include="Data\CAN_Template.xml" />
+    <Content Include="Default.aspx" />
+    <Content Include="Global.asax" />
+    <Content Include="HealthPlanetEmailTemplates\forgot-password-body.html" />
+    <Content Include="HealthPlanetEmailTemplates\forgot-password-subject.html" />
+    <Content Include="HealthPlanetEmailTemplates\password-changed-body.html" />
+    <Content Include="HealthPlanetEmailTemplates\password-changed-subject.html" />
+    <Content Include="HealthPlanetEmailTemplates\profile-changed-body.html" />
+    <Content Include="HealthPlanetEmailTemplates\profile-changed-subject.html" />
+    <Content Include="HealthPlanetEmailTemplates\registration-body.html" />
+    <Content Include="HealthPlanetEmailTemplates\registration-subject.html" />
+    <Content Include="HealthPlanetEmailTemplates\reset-securityquestion-body.html" />
+    <Content Include="HealthPlanetEmailTemplates\reset-securityquestion-subject.html" />
+    <Content Include="HealthPlanetEmailTemplates\securityquestion-changed-body.html" />
+    <Content Include="HealthPlanetEmailTemplates\securityquestion-changed-subject.html" />
+    <Content Include="Images\Lab_Client_Application.png" />
+    <Content Include="Images\Lab_Client_Footer.png" />
+    <Content Include="Images\Lab2_Application.png" />
+    <Content Include="Images\Lab2_Footer.png" />
+    <None Include="Scripts\jquery-1.6.4-vsdoc.js" />
+    <Content Include="Scripts\jquery-1.6.4.js" />
+    <Content Include="Scripts\jquery-1.6.4.min.js" />
+    <Content Include="Scripts\jquery.signalR-1.2.2.js" />
+    <Content Include="Scripts\jquery.signalR-1.2.2.min.js" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ActivityService.cs" />
+    <Compile Include="AlertService.cs" />
+    <Compile Include="App_Start\NinjectWcfClientExtensions.cs" />
+    <Compile Include="AssessmentMaintenanceService.cs" />
+    <Compile Include="AssessmentRecommendedItemService.cs" />
+    <Compile Include="AuthorizationService.cs" />
+    <Compile Include="CacheViewerService.cs" />
+    <Compile Include="CallCenterService.cs" />
+    <Compile Include="CarePlanService.cs" />
+    <Compile Include="ErrorLogService.cs" />
+    <Compile Include="CorrespondenceUnitTrackingLogService.cs" />
+    <Compile Include="DiagnosticsService.cs" />
+    <Compile Include="DxProcService.cs" />
+    <Compile Include="HealthScreeningService.cs" />
+    <Compile Include="HealthStatusService.cs" />
+    <Compile Include="HealthwiseService.cs" />
+    <Compile Include="Helpers\CacheEntry.cs" />
+    <Compile Include="Helpers\WopiOperationResultBuilder.cs" />
+    <Compile Include="Hubs\CallCenterHub.cs" />
+    <Compile Include="InterqualService.cs" />
+    <Compile Include="LabClaimService.cs" />
+    <Compile Include="LetterTemplateService.cs" />
+    <Compile Include="LogoutService.cs" />
+    <Compile Include="Mappers\AssessmentItemViewModelMapper.cs" />
+    <Compile Include="Mappers\AssessmentPublishListMapper.cs" />
+    <Compile Include="Mappers\AssessmentQuestionItemViewModelMapper.cs" />
+    <Compile Include="Mappers\AssessmentViewModelMapper.cs" />
+    <Compile Include="Mappers\HccViewModelMapper.cs" />
+    <Compile Include="Mappers\MemberSearchRequestMapper.cs" />
+    <Compile Include="DisclaimerService.cs" />
+    <Compile Include="Helpers\ExceptionHandler.cs" />
+    <Compile Include="Mappers\QuestionTypeViewModelMapper.cs" />
+    <Compile Include="Mappers\ResponseTypeViewModelMapper.cs" />
+    <Compile Include="Mappers\ResponseViewModelMapper.cs" />
+    <Compile Include="Mappers\UserResponseViewModelMapper.cs" />
+    <Compile Include="MedicalConditionService.cs" />
+    <Compile Include="MemberTrackingBoardService.cs" />
+    <Compile Include="MenuLinksService.cs" />
+    <Compile Include="ProcedureService.cs" />
+    <Compile Include="Common\AuthorizationHelper.cs" />
+    <Compile Include="Common\BusinessObjectFactory.cs" />
+    <Compile Include="Common\BusinessObjectFactoryBuilder.cs" />
+    <Compile Include="Common\DependencyResolver.cs" />
+    <Compile Include="Common\IBusinessObjectFactory.cs" />
+    <Compile Include="CoordinationOfBenefitsService.cs" />
+    <Compile Include="DrugReviewService.cs" />
+    <Compile Include="EncounterService.cs" />
+    <Compile Include="Helpers\DictionaryToStronglyTypedHelper.cs" />
+    <Compile Include="App_Start\NinjectWebCommon.cs" />
+    <Compile Include="Helpers\ArgumentParser.cs" />
+    <Compile Include="AssessmentService.cs" />
+    <Compile Include="AuthenticationService.cs" />
+    <Compile Include="CaseService.cs" />
+    <Compile Include="ChallengeResponse.cs" />
+    <Compile Include="ConditionCenterService.cs" />
+    <Compile Include="ContactService.cs" />
+    <Compile Include="CorrespondenceService.cs" />
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DiagnosisService.cs" />
+    <Compile Include="EligibilityService.cs" />
+    <Compile Include="Empty.cs" />
+    <Compile Include="FileTransferService.cs" />
+    <Compile Include="FlagService.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="GoalService.cs" />
+    <Compile Include="GroupService.cs" />
+    <Compile Include="Helpers\GenericOperationResultBuilder.cs" />
+    <Compile Include="Helpers\JsonConverter.cs" />
+    <Compile Include="HealthSurveyService.cs" />
+    <Compile Include="IMessageHandler.cs" />
+    <Compile Include="IntegratedEligibilityService.cs" />
+    <Compile Include="Interceptors\BenchmarkingInterceptor.cs" />
+    <Compile Include="InterventionService.cs" />
+    <Compile Include="LabResultsService.cs" />
+    <Compile Include="LabService.cs" />
+    <Compile Include="LetterService.cs" />
+    <Compile Include="MaintenanceListService.cs" />
+    <Compile Include="MedicationReviewQuestionResponseHistoryService.cs" />
+    <Compile Include="MedicationReviewService.cs" />
+    <Compile Include="MemberNoteService.cs" />
+    <Compile Include="MemberOverviewService.cs" />
+    <Compile Include="MemberService.cs" />
+    <Compile Include="GenericOperationResult.cs" />
+    <Compile Include="MtmService.cs" />
+    <Compile Include="PackageService.cs" />
+    <Compile Include="PayerService.cs" />
+    <Compile Include="PerformanceMonitoringHandler.cs" />
+    <Compile Include="PermissionService.cs" />
+    <Compile Include="PharmacyService.cs" />
+    <Compile Include="ClinicalMetricsService.cs" />
+    <Compile Include="PreRegistrationService.cs" />
+    <Compile Include="ProblemService.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ProviderAppointmentService.cs" />
+    <Compile Include="ProviderService.cs" />
+    <Compile Include="AssessmentPublishService.cs" />
+    <Compile Include="QueryGovernorService.cs" />
+    <Compile Include="RecommendedCareService.cs" />
+    <Compile Include="ReferralService.cs" />
+    <Compile Include="RegistrationService.cs" />
+    <Compile Include="ResetSecurityQuestionService.cs" />
+    <Compile Include="ResourceService.cs" />
+    <Compile Include="RoleService.cs" />
+    <Compile Include="SecurityImageService.cs" />
+    <Compile Include="SecurityQuestionService.cs" />
+    <Compile Include="ServiceHostFactory.cs" />
+    <Compile Include="SessionManagementService.cs" />
+    <Compile Include="SpecialHandlingNoteService.cs" />
+    <Compile Include="StaffService.cs" />
+    <Compile Include="StateValuesService.cs" />
+    <Compile Include="StoreItem.cs" />
+    <Compile Include="TeamService.cs" />
+    <Compile Include="TimelinessService.cs" />
+    <Compile Include="UserProfileService.cs" />
+    <Compile Include="UserSecurityQuestionService.cs" />
+    <Compile Include="ViewModels\Assessment\AssessmentItemViewModel.cs" />
+    <Compile Include="ViewModels\Assessment\AssessmentPublishListViewModel.cs" />
+    <Compile Include="ViewModels\Assessment\AssessmentViewModel.cs" />
+    <Compile Include="ViewModels\Assessment\QuestionViewModel.cs" />
+    <Compile Include="ViewModels\Assessment\QuestionTypeViewModel.cs" />
+    <Compile Include="ViewModels\Assessment\ResponseViewModel.cs" />
+    <Compile Include="ViewModels\Assessment\ResponseTypeViewModel.cs" />
+    <Compile Include="ViewModels\Assessment\UserResponseViewModel.cs" />
+    <Compile Include="ViewModels\Dashboard\Hcc.cs" />
+    <Compile Include="VisitService.cs" />
+    <Compile Include="WopiHostService.cs" />
+    <Compile Include="WorkListService.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Properties\SlowCheetah\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Web.Qa.config">
+      <DependentUpon>Web.config</DependentUpon>
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Web.Prod.config">
+      <DependentUpon>Web.config</DependentUpon>
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\UPMC.Business.Interfaces\UPMC.Business.Interfaces.csproj">
+      <Project>{e9e286f9-e950-45ed-b1c7-ae7fb2febe6a}</Project>
+      <Name>UPMC.Business.Interfaces</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\UPMC.Business\UPMC.Business.csproj">
+      <Project>{5AD5615E-038F-4147-9578-92373095121E}</Project>
+      <Name>UPMC.Business</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\UPMC.Common\UPMC.Common.csproj">
+      <Project>{a67fbf02-7b88-462d-8eae-7bc83a2b4cc0}</Project>
+      <Name>UPMC.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\UPMC.DataAccess.Interfaces\UPMC.DataAccess.Interfaces.csproj">
+      <Project>{9E7D4B16-48AC-4A8D-B4F6-4FA6D27CA1FE}</Project>
+      <Name>UPMC.DataAccess.Interfaces</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\UPMC.DataAccess\UPMC.DataAccess.csproj">
+      <Project>{7E758D79-33BE-4687-8CBA-A9440C048C94}</Project>
+      <Name>UPMC.DataAccess</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\UPMC.Messaging.Publishers\Upmc.Messaging.Publishers.csproj">
+      <Project>{244f64e5-08ed-43ac-aa19-0b5cd7d994ec}</Project>
+      <Name>Upmc.Messaging.Publishers</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\UPMC.Web.Utils\UPMC.Web.Utils.csproj">
+      <Project>{78BBA4C7-5990-412B-9FDC-F0DC5040FC56}</Project>
+      <Name>UPMC.Web.Utils</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\UPMC.Common.Contracts\UPMC.Common.Contracts.csproj">
+      <Project>{818CC512-4861-4FB4-8C30-99EABD56E5CE}</Project>
+      <Name>UPMC.Common.Contracts</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="dataConfiguration.config">
+      <TransformOnBuild>true</TransformOnBuild>
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="exceptionhandlingconfiguration.config" />
+    <Content Include="loggingconfiguration.config" />
+    <Content Include="loggingdistributorconfiguration.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="connections.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Aspose\Aspose.Total.lic">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <None Include="dataConfiguration.Debug.config">
+      <DependentUpon>dataConfiguration.config</DependentUpon>
+      <IsTransformFile>True</IsTransformFile>
+    </None>
+    <None Include="dataConfiguration.Lab.config">
+      <DependentUpon>dataConfiguration.config</DependentUpon>
+      <IsTransformFile>True</IsTransformFile>
+    </None>
+    <None Include="dataConfiguration.Qa.config">
+      <DependentUpon>dataConfiguration.config</DependentUpon>
+      <IsTransformFile>True</IsTransformFile>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="dataConfiguration.ProdSupport.config">
+      <DependentUpon>dataConfiguration.config</DependentUpon>
+      <IsTransformFile>True</IsTransformFile>
+    </None>
+    <None Include="dataConfiguration.Training.config">
+      <DependentUpon>dataConfiguration.config</DependentUpon>
+      <IsTransformFile>True</IsTransformFile>
+    </None>
+    <None Include="packages.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Properties\PublishProfiles\Lab.pubxml" />
+    <None Include="Properties\PublishProfiles\Debug.pubxml" />
+    <None Include="Properties\PublishProfiles\Qa.pubxml" />
+    <None Include="Web.Lab.config">
+      <DependentUpon>Web.config</DependentUpon>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web.ProdSupport.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <PropertyGroup Label="SlowCheetah">
+    <SlowCheetahToolsPath>$([System.IO.Path]::GetFullPath( $(MSBuildProjectDirectory)..\..\..\..\packages\SlowCheetah.2.5.10.3\tools\))</SlowCheetahToolsPath>
+    <SlowCheetah_EnableImportFromNuGet Condition=" '$(SC_EnableImportFromNuGet)'=='' ">true</SlowCheetah_EnableImportFromNuGet>
+    <SlowCheetah_NuGetImportPath Condition=" '$(SlowCheetah_NuGetImportPath)'=='' ">$([System.IO.Path]::GetFullPath( $(MSBuildProjectDirectory)\Properties\SlowCheetah\SlowCheetah.Transforms.targets ))</SlowCheetah_NuGetImportPath>
+    <SlowCheetahTargets Condition=" '$(SlowCheetah_EnableImportFromNuGet)'=='true' and Exists('$(SlowCheetah_NuGetImportPath)') ">$(SlowCheetah_NuGetImportPath)</SlowCheetahTargets>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>False</AutoAssignPort>
+          <DevelopmentServerPort>60448</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>
+          </IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <Target Name="AfterBuild" Condition="$(IsAutoBuild)=='True'">
+    <ItemGroup>
+      <DeleteAfterBuild Include="$(WebProjectOutputDir)\Web.*.config" />
+    </ItemGroup>
+    <TransformXml Source="Web.config" Transform="$(ProjectConfigTransformFileName)" Destination="$(WebProjectOutputDir)\Web.config" />
+    <Delete Files="@(DeleteAfterBuild)" />
+  </Target>
+  <Import Project="$(SlowCheetahTargets)" Condition="Exists('$(SlowCheetahTargets)')" Label="SlowCheetah" />
+  <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
+  <UsingTask TaskName="TransformXml" AssemblyFile="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v10.0\Web\Microsoft.Web.Publishing.Tasks.dll" />
+  <Target Name="AfterCompile">
+    <!-- Generate transformed web config and dataConfiguration in the intermediate directory, so we have all configs when performing TFS Lab Build -->
+    <TransformXml Source="web.config" Destination="$(IntermediateOutputPath)Web.config.Debug" Transform="web.Debug.config" />
+    <TransformXml Source="web.config" Destination="$(IntermediateOutputPath)Web.config.Lab" Transform="web.Lab.config" />
+    <TransformXml Source="web.config" Destination="$(IntermediateOutputPath)Web.config.Qa" Transform="web.Qa.config" />
+    <TransformXml Source="web.config" Destination="$(IntermediateOutputPath)Web.config.ProdSupport" Transform="web.ProdSupport.config" />
+    <TransformXml Source="web.config" Destination="$(IntermediateOutputPath)Web.config.Prod" Transform="web.Prod.config" />
+    <TransformXml Source="dataConfiguration.config" Destination="$(IntermediateOutputPath)dataConfiguration.config.Debug" Transform="dataConfiguration.Debug.config" />
+    <TransformXml Source="dataConfiguration.config" Destination="$(IntermediateOutputPath)dataConfiguration.config.Lab" Transform="dataConfiguration.Lab.config" />
+    <TransformXml Source="dataConfiguration.config" Destination="$(IntermediateOutputPath)dataConfiguration.config.Qa" Transform="dataConfiguration.Qa.config" />
+    <TransformXml Source="dataConfiguration.config" Destination="$(IntermediateOutputPath)dataConfiguration.config.ProdSupport" Transform="dataConfiguration.ProdSupport.config" />
+    <TransformXml Source="dataConfiguration.config" Destination="$(IntermediateOutputPath)dataConfiguration.config.Training" Transform="dataConfiguration.Training.config" />
+    <ItemGroup>
+      <AppConfigWithTargetPath Include="$(IntermediateOutputPath)Web.config.Debug">
+        <TargetPath>Web.config.Debug</TargetPath>
+      </AppConfigWithTargetPath>
+      <AppConfigWithTargetPath Include="$(IntermediateOutputPath)Web.config.Lab">
+        <TargetPath>Web.config.Lab</TargetPath>
+      </AppConfigWithTargetPath>
+      <AppConfigWithTargetPath Include="$(IntermediateOutputPath)Web.config.Qa">
+        <TargetPath>Web.config.Qa</TargetPath>
+      </AppConfigWithTargetPath>
+      <AppConfigWithTargetPath Include="$(IntermediateOutputPath)Web.config.ProdSupport">
+        <TargetPath>Web.config.ProdSupport</TargetPath>
+      </AppConfigWithTargetPath>
+      <AppConfigWithTargetPath Include="$(IntermediateOutputPath)Web.config.Prod">
+        <TargetPath>Web.config.Prod</TargetPath>
+      </AppConfigWithTargetPath>
+      <AppConfigWithTargetPath Include="$(IntermediateOutputPath)dataConfiguration.config.Debug">
+        <TargetPath>dataConfiguration.config.Debug</TargetPath>
+      </AppConfigWithTargetPath>
+      <AppConfigWithTargetPath Include="$(IntermediateOutputPath)dataConfiguration.config.Lab">
+        <TargetPath>dataConfiguration.config.Lab</TargetPath>
+      </AppConfigWithTargetPath>
+      <AppConfigWithTargetPath Include="$(IntermediateOutputPath)dataConfiguration.config.Qa">
+        <TargetPath>dataConfiguration.config.Qa</TargetPath>
+      </AppConfigWithTargetPath>
+      <AppConfigWithTargetPath Include="$(IntermediateOutputPath)dataConfiguration.config.ProdSupport">
+        <TargetPath>dataConfiguration.config.ProdSupport</TargetPath>
+      </AppConfigWithTargetPath>
+      <AppConfigWithTargetPath Include="$(IntermediateOutputPath)dataConfiguration.config.Training">
+        <TargetPath>dataConfiguration.config.Training</TargetPath>
+      </AppConfigWithTargetPath>
+    </ItemGroup>
+  </Target>
+  <Import Project="..\packages\Microsoft.Bcl.Build.1.0.21\build\Microsoft.Bcl.Build.targets" Condition="Exists('..\packages\Microsoft.Bcl.Build.1.0.21\build\Microsoft.Bcl.Build.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.Bcl.Build.1.0.21\build\Microsoft.Bcl.Build.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Bcl.Build.1.0.21\build\Microsoft.Bcl.Build.targets'))" />
+  </Target>
+</Project>

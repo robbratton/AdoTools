@@ -1,0 +1,124 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<dataConfiguration>
+  <xmlSerializerSection type="Microsoft.Practices.EnterpriseLibrary.Data.Configuration.DatabaseSettings, Microsoft.Practices.EnterpriseLibrary.Data, Version=1.1.0.0, Culture=neutral, PublicKeyToken=null">
+    <enterpriseLibrary.databaseSettings xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" defaultInstance="Database Instance" xmlns="http://www.microsoft.com/practices/enterpriselibrary/08-31-2004/data">
+      <databaseTypes>
+        <databaseType name="Sql Server" type="Microsoft.Practices.EnterpriseLibrary.Data.Sql.SqlDatabase, Microsoft.Practices.EnterpriseLibrary.Data, Version=1.1.0.0, Culture=neutral, PublicKeyToken=null" />
+      </databaseTypes>
+      <instances>
+        <instance name="Enterprise" type="Sql Server" connectionString="Enterprise" />
+        <instance name="Common" type="Sql Server" connectionString="Common" />
+        <instance name="upmc_SQLConn" type="Sql Server" connectionString="upmc_SQLConn" />
+        <instance name="Logging" type="Sql Server" connectionString="Logging" />
+        <instance name="upmc_SqlDWConn" type="Sql Server" connectionString="upmc_SqlDWConn" />
+        <instance name="RxAnte_CHS_Audit" type="Sql Server" connectionString="RxAnte_CHS_Audit" />
+        <instance name="RxAnte_CHS_CMN_WEB" type="Sql Server" connectionString="RxAnte_CHS_CMN_WEB" />
+        <instance name="RxAnte_CHS_ENT_WEB" type="Sql Server" connectionString="RxAnte_CHS_ENT_WEB" />
+        <instance name="RxAnte_CHS_HealthPlaNET_Web" type="Sql Server" connectionString="RxAnte_CHS_HealthPlaNET_Web" />
+        <instance name="RxAnte_CHS_Logging" type="Sql Server" connectionString="RxAnte_CHS_Logging" />
+      </instances>
+
+      <connectionStrings>
+        <connectionString name="Enterprise">
+          <parameters>
+            <parameter name="database" value="Enterprise_WEB_Dev6" isSensitive="false" />
+            <parameter name="User ID" value="acme_user" isSensitive="false" />
+            <parameter name="Password" value="R0@drunner" isSensitive="false" />
+            <parameter name="server" value="WINHPLNSDEV28" isSensitive="false" />
+            <parameter name="Application Name" value="HealthPlaNET Development Web Services" />
+          </parameters>
+        </connectionString>
+        <connectionString name="Common">
+          <parameters>
+            <parameter name="database" value="Common_WEB_Dev6" isSensitive="false" />
+            <parameter name="User ID" value="acme_user" isSensitive="false" />
+            <parameter name="Password" value="R0@drunner" isSensitive="false" />
+            <parameter name="server" value="WINHPLNSDEV28" isSensitive="false" />
+            <parameter name="Application Name" value="HealthPlaNET Development Web Services" />
+          </parameters>
+        </connectionString>
+        <connectionString name="UPMC_SQLConn">
+          <parameters>
+            <parameter name="database" value="HealthPlaNET_Web_Dev6" isSensitive="false" />
+            <parameter name="User ID" value="acme_user" isSensitive="false" />
+            <parameter name="Password" value="R0@drunner" isSensitive="false" />
+            <parameter name="server" value="WINHPLNSDEV28" isSensitive="false" />
+            <parameter name="Application Name" value="HealthPlaNET Development Web Services" />
+          </parameters>
+        </connectionString>
+        <connectionString name="Logging">
+          <parameters>
+            <parameter name="database" value="Logging_Dev6" isSensitive="false" />
+            <parameter name="User ID" value="acme_user" isSensitive="false" />
+            <parameter name="Password" value="R0@drunner" isSensitive="false" />
+            <parameter name="server" value="WINHPLNSDEV28" isSensitive="false" />
+            <parameter name="Application Name" value="HealthPlaNET Development Web Services" />
+          </parameters>
+        </connectionString>
+        <connectionString name="UPMC_SqlDWConn">
+          <parameters>
+            <parameter name="database" value="HealthPlaNET_DataMart_WEB_Dev6" isSensitive="false" />
+            <parameter name="User ID" value="acme_user" isSensitive="false" />
+            <parameter name="Password" value="R0@drunner" isSensitive="false" />
+            <parameter name="server" value="WINHPLNSDEV28" isSensitive="false" />
+            <parameter name="Application Name" value="HealthPlaNET Development Web Services" />
+          </parameters>
+        </connectionString>
+        <connectionString name="RxAnte_CHS_Audit">
+          <parameters>
+            <parameter name="database" value="Audit_Development" isSensitive="false" />
+            <parameter name="User ID" value="acme_user" isSensitive="false" />
+            <parameter name="Password" value="R0@drunner" isSensitive="false" />
+            <parameter name="server" value="winhplnsdev22\ms2012" isSensitive="false" />
+            <parameter name="Application Name" value="HealthPlaNET Development Web Services" />
+          </parameters>
+        </connectionString>
+        <connectionString name="RxAnte_CHS_CMN_WEB">
+          <parameters>
+            <parameter name="database" value="Common_Web_Dev6" isSensitive="false"/>
+            <parameter name="User ID" value="acme_user" isSensitive="false"/>
+            <parameter name="Password" value="R0@drunner" isSensitive="false"/>
+            <parameter name="server" value="WINHPLNSDEV43" isSensitive="false"/>
+            <parameter name="Application Name" value="HealthPlaNET Lab Web Services"/>
+          </parameters>
+        </connectionString>
+        <connectionString name="RxAnte_CHS_ENT_WEB">
+          <parameters>
+            <parameter name="database" value="Enterprise_WEB_Dev6" isSensitive="false"/>
+            <parameter name="User ID" value="acme_user" isSensitive="false"/>
+            <parameter name="Password" value="R0@drunner" isSensitive="false"/>
+            <parameter name="server" value="WINHPLNSDEV43" isSensitive="false"/>
+            <parameter name="Application Name" value="HealthPlaNET Lab Web Services"/>
+          </parameters>
+        </connectionString>
+        <connectionString name="RxAnte_CHS_HealthPlaNET_Web">
+          <parameters>
+            <parameter name="database" value="HealthPlaNET_WEB_MC_DEV" isSensitive="false" />
+            <parameter name="User ID" value="acme_user" isSensitive="false" />
+            <parameter name="Password" value="R0@drunner" isSensitive="false" />
+            <parameter name="server" value="WINHPLNSDEV43" isSensitive="false" />
+            <parameter name="Application Name" value="HealthPlaNET Development Web Services" />
+          </parameters>
+        </connectionString>
+        <connectionString name="RxAnte_CHS_Logging">
+          <parameters>
+            <parameter name="database" value="Logging_DevelopmentR2" isSensitive="false" />
+            <parameter name="User ID" value="acme_user" isSensitive="false" />
+            <parameter name="Password" value="R0@drunner" isSensitive="false" />
+            <parameter name="server" value="winhplnsdev22\ms2012" isSensitive="false" />
+            <parameter name="Application Name" value="HealthPlaNET Development Web Services" />
+          </parameters>
+        </connectionString>
+        <connectionString name="RxAnte_SqlDWConn">
+          <parameters>
+            <parameter name="database" value="HealthPlaNET_DataMart_DevelopmentR2" isSensitive="false" />
+            <parameter name="User ID" value="acme_user" isSensitive="false" />
+            <parameter name="Password" value="R0@drunner" isSensitive="false" />
+            <parameter name="server" value="winhplnsdev22\ms2012" isSensitive="false" />
+            <parameter name="Application Name" value="HealthPlaNET Development Web Services" />
+          </parameters>
+        </connectionString>
+      </connectionStrings>
+    </enterpriseLibrary.databaseSettings>
+  </xmlSerializerSection>
+</dataConfiguration>

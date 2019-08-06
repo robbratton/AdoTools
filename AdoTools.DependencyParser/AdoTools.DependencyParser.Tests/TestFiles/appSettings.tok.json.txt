@@ -1,0 +1,52 @@
+{
+  "AppSettings": {
+    "_VirtualDirectoryName_comment": "Identifies the IIS virtual directory name for swagger.",
+    "VirtualDirectoryName": "SharedSavings",
+    "_EnableSwagger_comment": "Enables the swagger endpoint for the service. Should never be true for production.",
+    "EnableSwagger": "%{ENABLE_SWAGGER}%",
+    "_ServiceBusAuditQueueName_comment": "The name of the audit queue to use.",
+    "ServiceBusAuditQueueName": "audit@%{QUEUE_SERVER}%",
+    "_ServiceBusErrorQueueName_comment": "The name of the error queue to use.",
+    "ServiceBusErrorQueueName": "error@%{QUEUE_SERVER}%",
+    "_ServiceBusMessageEndpointMappingFilePath_comment": "The file path for service bus endpoint mapping file.",
+    "ServiceBusMessageEndpointMappingFilePath": "\\\\%{MAPPING_FILE_SERVER}%\\_ConfigurationFiles\\SharedSavings\\MessageRouting.xml",
+    "_ServiceBusEndpointInstanceMappingFilePath_comment": "The file path for service bus instance mapping file.",
+    "ServiceBusEndpointInstanceMappingFilePath": "\\\\%{MAPPING_FILE_SERVER}%\\_ConfigurationFiles\\SharedSavings\\EndpointInstanceMapping.xml"
+  },
+  "ConnectionStrings": {
+    "Logging": "Server=%{LoggingDBServer}%;Database=%{LoggingDBName}%;User Id=%{DATABASE_USER}%;Password=%{DATABASE_PASSWORD}%;Persist Security Info=False;Connect Timeout=60;Encrypt=False;TrustServerCertificate=True",
+    "SharedSavings": "Server=%{SharedSavingsDBServer}%;Database=%{SharedSavingsDBName}%;User Id=%{DATABASE_USER}%;Password=%{DATABASE_PASSWORD}%;Persist Security Info=False;Connect Timeout=60;Encrypt=False;TrustServerCertificate=True",
+    "CommonModel": "Server=%{CommonDBServer}%;Database=%{CommonDBName}%;User Id=%{DATABASE_USER}%;Password=%{DATABASE_PASSWORD}%;Persist Security Info=False;Connect Timeout=60;Encrypt=False;TrustServerCertificate=True",
+    "RedisConnection": "%{REDIS_CONNECTION}%"
+  },
+  "CoreMonitoringSettingsConfigurationElement": {
+    "Enabled": "true",
+    "ServiceControlQueueName": "particular.servicecontrol@%{PARTICULAR_SERVER}%"
+  },
+  "CorePersistenceSettingsConfigurationElement": {
+    "DbConnectionName": "NServiceBus"
+  },
+  "CoreServiceBusConfigurationSettingsSection": {
+    "LicenseFilePath": ".\\License\\License.xml\"",
+    "EnableInstallers": "true",
+    "AuditQueueName": "audit@%{QUEUE_SERVER}%",
+    "ErrorQueueName": "@%{QUEUE_SERVER}%",
+    "EndpointInstanceMappingFilePath": "\\\\%{MAPPING_FILE_SERVER}%\\_ConfigurationFiles\\EndpointInstanceMapping.xml",
+    "MessageEndpointMappingFilePath": "\\\\%{MAPPING_FILE_SERVER}%\\_ConfigurationFiles\\MessageRouting.xml",
+    "RegisterDefaultBehaviors": "false",
+    "enableCallbacks": "true",
+    "UniqueAddress": 1
+  },
+  "Logging": {
+    "IncludeScopes": false,
+    "LogLevel": {
+      "Default": "%{DEFAULT_LOGGING_LEVEL}%",
+      "System": "Information",
+      "Microsoft": "Information"
+    }
+  },
+  "OAuth2Settings": {
+    "Authority": "%{AZURE_AD_AUTHORITY}%",
+    "ApplicationId": "%{AZURE_AD_APP_ID}%"
+  }
+}
