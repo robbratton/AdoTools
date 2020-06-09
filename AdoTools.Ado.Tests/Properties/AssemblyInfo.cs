@@ -10,7 +10,7 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("Robert E. Bratton")]
 [assembly: AssemblyProduct("AdoTools.Ado.Tests")]
-[assembly: AssemblyCopyright("Copyright © Robert E. Bratton 2019")]
+[assembly: AssemblyCopyright("Copyright © Robert E. Bratton 2020")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
